@@ -39,27 +39,229 @@ Text Domain:  accelerate-theme-child
 	text-transform: uppercase;
 }
 
+.case {
+  display: inline-block;
+  float: left;
+  width: 33.3%;
+}
 
+.case h5 {
+  margin-top: 0px;
+  color: #fff;
+}
+
+/*Twitter-Feed*/
+
+#ctf .ctf-author-name {
+  display: none;
+}
+
+#ctf.ctf-styles .ctf-author-screenname, #ctf.ctf-styles .ctf-context, #ctf.ctf-styles .ctf-twitterlink, #ctf.ctf-styles .ctf-tweet-meta {
+  font-size: 20px;
+}
+
+.tweet-header {
+font: 700 1em/1.75 'Montserrat', 'Open Sans', Arial, sans-serif;
+color: #a6a6a6;
+text-transform: uppercase;
+display: inline-flex;
+padding-left: 50px;
+}
+
+a.ctf-author-screenname {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+div.ctf-tweets {
+  padding-left: 50px;
+}
+
+a.ctf-twitterlink {
+  color: #45ac9d;
+  text-transform: uppercase;
+  font-size: 100%;
+}
+
+.follow-us span {
+  padding-left: 50px;
+}
 /*Case Study*/
 
 article.case-study {
   margin: 40px 0 0;
+
 }
 
 aside.case-study-sidebar {
   float: left;
   width: 314px;
-  margin 0 40px 0 0;
+  margin 0 100px 100px 0;
 }
 
-img.alignright {
+/*img.alignright {
   padding-bottom: 50px;
   float: right;
-}
+  padding-left: 100px;
+}*/
 
 a {
   font-family: 'Montserrat';
 	font-weight: 700;
 	color: #45ac9d;
 	text-transform: uppercase;
+}
+
+div.case-study-images img {
+	width: 60%;
+	height: auto;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+/*Footer*/
+
+ul#menu-social-media-nav.social-media-menu {
+  display: flex;
+     align-items: center;
+     justify-content: center;
+  list-style: none;
+}
+
+.fa-twitter-square,
+.fa-facebook-official,
+.genericon-linkedin-alt {
+  color: black;
+}
+
+/*Contact*/
+
+.content {
+  width: 66%;
+  margin: 0 auto;
+}
+
+#nf-field-1-container,
+#nf-field-2-container {
+  width: 47.5%;
+  display: inline-block;
+}
+
+#nf-field-1-container {
+  margin-right: 27px;
+}
+
+.ninja-forms-req-symbol {
+  display: none;
+}
+
+.nf-form-fields-required {
+  display: none;
+}
+
+#nf-field-4 {
+  background-color: #45ac9d;
+  float: right;
+}
+
+
+/*about*/
+
+.about-content p {
+  width: 50%;
+  margin: 0 auto;
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.our-services {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.our-services h6 {
+  text-transform: uppercase;
+}
+
+.content-body {
+  width: 81%;
+  margin: 0 auto;
+}
+
+.content-strategy,
+.influencer-mapping,
+.social-media-strategy,
+.design-development {
+  padding-bottom: 50px;
+  display: inline-flex;
+  align-items: center;
+  text-align: justify;
+}
+
+.imgBx {
+  flex-shrink: 0;
+}
+
+.content-strategy h2,
+.content-strategy p,
+.social-media-strategy h2,
+.social-media-strategy p {
+  margin-left: 100px;
+}
+
+.influencer-mapping h2,
+.influencer-mapping p,
+.design-development h2,
+.design-development p {
+  margin-right: 100px;
+}
+
+.employment {
+  width: 81%;
+  margin: 0 auto;
+  display: flex;
+  border-top: 1px solid #bfbfbf;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.employment h2 {
+  margin-right: 12.5px;
+}
+
+.employment .button {
+  margin-left: 12.5px;
+}
+
+/*error-page*/
+
+.error-gif {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 20px solid black;
+}
+
+.error-text {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Londrina Solid', 'Montserrat', 'Open Sans', Arial, sans-serif;
+}
+
+/*Sidebar*/
+
+.mc4wp-form-fields label {
+  font: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mc4wp-form-fields .button {
+  font: 'Montserrat';
+  background-color: #45ac9d;
+  text-transform: uppercase;
 }

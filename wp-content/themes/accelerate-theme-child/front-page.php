@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="main-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>
-				<a class="button" href="<?php echo site_url('/blog/') ?>">View Our Work</a>
+				<a class="button" href="<?php echo site_url('/case-studies/') ?>">View Our Work</a>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
@@ -26,23 +26,22 @@ get_header(); ?>
 <section class="featured-work">
 	<div class="site-content">
 		<h4>Featured Work</h4>
-
-		<ul class="homepage-featured-work">
 		<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
      <?php while ( have_posts() ) : the_post();
-		 		$image_1 = get_field('image_1');
+		 		$image_1 = get_field("image_1");
 				$size = "medium";
 		 ?>
-		 <li class="individual-featured-work">
+		 <div class="case">
 			<figure>
- 		 <?php echo wp_get_attachment_image($image_1, $size); ?>
+				<a href="<?php the_permalink(); ?>"><?php if($image_1) {
+				  echo wp_get_attachment_image ($image_1, $size);
+				} ?></a>
 		 </figure>
 
-       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		 </li>
+       <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+		 </div>
 		 <?php endwhile; ?>
     <?php wp_reset_query(); ?>
-	</ul>
 	</div>
 </section>
 
@@ -59,4 +58,17 @@ get_header(); ?>
    </div>
  </div>
 </section>
+
+
+<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+<div id="secondary" class="widget-area" role="complementary">
+	<h3 class="tweet-header">Recent Tweets</h3>
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+</div>
+<div class="follow-us">
+	<a href="https://twitter.com/Daniel67660726"><span>Follow Us</span> ›</a>
+</div>
+<?php endif; ?>
+
+
 <?php get_footer(); ?>

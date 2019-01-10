@@ -34,13 +34,13 @@ get_header(); ?>
 
 			<?php the_content (); ?>
 
-			<p><a target="_blank" href="<?php echo $link; ?>">Site Link</a></p>
+			<p><a href="<?php echo $link; ?>">Site Link</a></p>
 			</aside>
 
 			<div class="case-study-images">
-				<img class="alignright" src="<?php echo $image_1; ?>" />
-				<img class="alignright" src="<?php echo $image_2; ?>" />
-				<img class="alignright" src="<?php echo $image_3; ?>" />
+				<?php if($image_1) {
+				  echo wp_get_attachment_image ($image_1, "medium");
+				} ?>
 			</div>
 
 			<?php endwhile; // end of the loop. ?>
